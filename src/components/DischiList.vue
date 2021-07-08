@@ -1,6 +1,6 @@
 <template>
-<section class="container">
-    <div  class="row colonne">
+<section class="container" >
+    <div  class="row colonne" v-if="!semaforo">
           <div  v-for="dischi in dischiArray" :key="dischi.poster" class="col-2 immagini  "> 
            
                  <Musica :details="dischi" />
@@ -12,6 +12,8 @@
         
 
     </div>
+
+   <img class="orso" v-else src="@/assets/load.jpg" alt="">
 
 </section>
   
@@ -32,7 +34,8 @@ export default {
     data(){
         return{
             apiURL : 'https://flynn.boolean.careers/exercises/api/array/music',
-            dischiArray : ''
+            dischiArray : '',
+            semaforo: true
         }
 
 
@@ -48,7 +51,8 @@ export default {
             .then(risposta =>{
                 
                 this.dischiArray = risposta.data.response;
-                console.log(this.dischiArray)
+                console.log(this.dischiArray);
+                this.semaforo = false;
 
             })
             .catch(error =>{
@@ -79,6 +83,9 @@ export default {
     .immagini{
         width:20%;
         
+    }
+    .orso{
+        height:600px;
     }
 
 }

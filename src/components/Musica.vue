@@ -1,6 +1,6 @@
 <template>
 <div class="container">
-    <img class="fotografie" :src="details.poster" :alt="details.title">
+    <img  class="fotografie" :src="details.poster" :alt="details.title">
     <h3 class="titolo">{{details.title}}</h3>
     <p class="autore">{{details.author}}</p>
 </div>
