@@ -1,5 +1,5 @@
 <template>
-<header>
+<header >
     <img class="logo" src="@/assets/spotify.jpg" alt="">
 </header>
 
@@ -18,9 +18,21 @@ export default {
 header{
     background-color: black;
     width:100%;
+    height:80px;
+    display: flex;
+    line-height: 80px;
+    vertical-align: middle;
+    
+    
+    
+    
 
     .logo{
-    width:80px;
+    height:50px;
+    vertical-align: middle;
+    margin-top:1%;
+   
+    
 }
 
 }
