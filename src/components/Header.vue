@@ -1,6 +1,13 @@
 <template>
 <header >
     <img class="logo" src="@/assets/spotify.jpg" alt="">
+     <select class="scelta-genere">
+         <option selected>Scegli il genere</option>
+         <option value="1">Rock</option>
+         <option value="2">Pop</option>
+         <option value="3">Jazz</option>
+         <option value="4">Metal</option>
+     </select>
 </header>
 
   
@@ -22,16 +29,23 @@ header{
     display: flex;
     line-height: 80px;
     vertical-align: middle;
-    
+    justify-content: space-between;
+    align-items: center;
     
     
     
 
     .logo{
     height:50px;
-    vertical-align: middle;
-    margin-top:1%;
    
+   
+    
+}
+
+.scelta-genere{
+    height: 50%;
+    margin-right: 20px;;
+    
     
 }
 
